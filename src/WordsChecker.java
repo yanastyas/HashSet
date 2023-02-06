@@ -16,6 +16,6 @@ public class WordsChecker {
     }
 
     public boolean hasWord(String word) {
-        return text.contains(word);
+        return set.contains(word);
     }
 }
