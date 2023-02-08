@@ -5,17 +5,17 @@ import java.util.Set;
 
 public class WordsChecker {
 
-    public String hasWord;
+    protected String hasWord;
     protected String text;
     Set<String> set = new HashSet<>();
 
-    public WordsChecker(String text) {
+    protected WordsChecker(String text) {
         this.text = text;
         String[] word = text.split("\\P{IsAlphabetic}+");
         Collections.addAll(set, word);
     }
 
-    public boolean hasWord(String word) {
+    protected boolean hasWord(String word) {
         return set.contains(word);
     }
 }
