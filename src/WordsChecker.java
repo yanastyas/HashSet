@@ -7,8 +7,7 @@ public class WordsChecker {
 
     protected String hasWord;
     protected String text;
-    //Set<String> set = new HashSet<>();
-    protected Set <String> set;
+    protected Set<String> set;
 
     public WordsChecker(String text) {
         this.text = text;
