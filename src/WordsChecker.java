@@ -7,15 +7,17 @@ public class WordsChecker {
 
     protected String hasWord;
     protected String text;
-    Set<String> set = new HashSet<>();
+    //Set<String> set = new HashSet<>();
+    protected Set <String> set;
 
-    protected WordsChecker(String text) {
+    public WordsChecker(String text) {
         this.text = text;
+        set = new HashSet<>();
         String[] word = text.split("\\P{IsAlphabetic}+");
         Collections.addAll(set, word);
     }
 
-    protected boolean hasWord(String word) {
+    public boolean hasWord(String word) {
         return set.contains(word);
     }
 }
